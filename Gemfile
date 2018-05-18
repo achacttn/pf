@@ -29,6 +29,7 @@ gem 'pry-rails'
 gem 'haml-rails', '>= 0.3.4'
 gem 'jquery-rails'
 gem 'httparty'      # make HTTP requests i.e. for API
+gem 'guardian-content'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

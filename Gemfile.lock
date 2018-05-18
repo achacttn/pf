@@ -65,6 +65,8 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    guardian-content (0.2.2)
+      httparty (>= 0.5.2)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -200,6 +202,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
+  guardian-content
   haml-rails (>= 0.3.4)
   httparty
   jbuilder (~> 2.5)
