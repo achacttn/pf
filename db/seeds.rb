@@ -32,7 +32,7 @@ arg6 = Argument.create title: "Hillary Clinton's emails."
 arg7 = Argument.create title: "Constitutional separation of church and state."
 arg8 = Argument.create title: "God bless America."
 
-puts "Created #{Argument.all.length} arguments..."
+puts "Created #{Argument.count} arguments..."
 
 
 
@@ -48,7 +48,8 @@ c6 = Comment.create text_body: "This is terrific for bitcoin."
 c7 = Comment.create text_body: "This is excellent for bitcoin."
 c8 = Comment.create text_body: "I took out a third mortgage on my house to invest in bitcoin."
 
-puts "Created #{Comment.all.length} comments..."
+# Why does terminal say no comments or arguments created, but they have been correctly created in the database?
+puts "Created #{Comment.all.size} comments..."
 
 art1.arguments << arg1
 art1.arguments << arg2
