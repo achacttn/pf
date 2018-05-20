@@ -1,1 +1,18 @@
-%h1 PF HOME PAGE
+%h1 PF HOMEPAGE
+
+%h2 CONTROVERSIAL ARTICLES
+
+%h2 LATEST HEADLINES
+%ul
+    -@results["response"]["results"].each do |x|
+        %li
+            =x["webTitle"]
+            %br
+            Published:
+            =x["webPublicationDate"]
+            %br
+            %a{ :href => "#{x["webUrl"]}" }
+                =x["webUrl"]
+            %br
+            Category:
+            =x["sectionName"]
