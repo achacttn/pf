@@ -4,12 +4,24 @@
     <title>Pf</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+  <nav class="main-nav">
+    <ul>
+      <li class="nav-list-elements"><a>Discussions</a></li>
+      <li class="nav-list-elements">
+        <input class="nav-search" type="text" placeholder="Search">
+        <input class="nav-search" type="submit"><i class="fas fa-search"></i>
+      </li>
+      <li class="nav-list-elements"><a>Login</a></li>
+      <li class="nav-list-elements"><a>Register</a></li>
+    </ul>
+  </nav>
+  <h1 class="main-header">PF HOME</h1>
     <%= yield %>
   </body>
 </html>

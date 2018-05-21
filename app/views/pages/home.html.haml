@@ -1,11 +1,9 @@
-%h1 PF HOMEPAGE
-
-%h2 CONTROVERSIAL ARTICLES
-
-%h2 LATEST HEADLINES
+%h2.heading CONTROVERSIAL ARTICLES
+\
+%h2.heading LATEST HEADLINES
 %ul
     -@results["response"]["results"].each do |x|
-        %li
+        %li.search-result
             =x["webTitle"]
             %br
             Published:

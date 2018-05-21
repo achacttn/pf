@@ -6,3 +6,4 @@ class PagesController < ApplicationController
         @results = HTTParty.get( search_url )
     end
 end
+

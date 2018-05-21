@@ -1,6 +1,11 @@
-README
+Basic features:
+-API search
 
--Create an account
--Select news article
--Discuss, argue, debate points
--Filter by topics
+Bonus features:
+-Time zone
+
+Bugs:
+(1) Contradiction exists between rails console and terminal.
+
+Fixed:
+(1) Counting methods must come after associations are made.
