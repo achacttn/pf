@@ -3,9 +3,9 @@ class CreateComments < ActiveRecord::Migration[5.2]
     create_table :comments do |t|
       t.text :text_body
       t.integer :user_id
-      t.integer :argument_id
-
-      t.timestamps
+      t.integer :article_id
+      t.text :subject
+      t.timestamps 
     end
   end
 end

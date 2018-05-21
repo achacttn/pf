@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.text :email
       t.text :image
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end

@@ -60,3 +60,7 @@ ul {
 .article-query, .article-display {
     margin: 15px;
 }
+
+.article-query:hover {
+    background-color: hotpink;
+}

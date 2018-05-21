@@ -5,7 +5,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.datetime :publish_date
       t.text :url
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end

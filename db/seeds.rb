@@ -12,10 +12,10 @@ puts "Created #{User.all.length} users..."
 Article.destroy_all
 puts "Creating articles..."
 
-art1 = Article.create title: "Healthcare policy changes.", publish_date: "2018-05-14", url: "http://www.placecage.com/350/350", article_api_id: "http://www.placecage.com/g/200/198", section: "General"
-art2 = Article.create title: "NASA announcement.", publish_date: "2018-05-15", url: "http://www.placecage.com/350/350", article_api_id: "http://www.placecage.com/g/200/199", section: "General"
-art3 = Article.create title: "Political debate.", publish_date: "2018-05-16", url: "http://www.placecage.com/350/350", article_api_id: "http://www.placecage.com/g/200/200", section: "General"
-art4 = Article.create title: "Compulsory religious education.", publish_date: "2018-05-17", url: "http://www.placecage.com/350/350", article_api_id: "http://www.placecage.com/g/200/201", section: "General"
+art1 = Article.create title: "Healthcare policy changes.", publish_date: "2018-05-14", url: "http://www.placecage.com/350/350", article_api_id: "aaaaa", section: "General"
+art2 = Article.create title: "NASA announcement.", publish_date: "2018-05-15", url: "http://www.placecage.com/350/350", article_api_id: "bbbbb", section: "General"
+art3 = Article.create title: "Political debate.", publish_date: "2018-05-16", url: "http://www.placecage.com/350/350", article_api_id: "ccccc", section: "General"
+art4 = Article.create title: "Compulsory religious education.", publish_date: "2018-05-17", url: "http://www.placecage.com/350/350", article_api_id: "ddddd", section: "General"
 
 puts "Created #{Article.all.length} articles..."
 
@@ -23,14 +23,14 @@ puts "Created #{Article.all.length} articles..."
 Comment.destroy_all
 puts "Creating comments..."
 
-c1 = Comment.create subject: "The link between vaccines and autism.", text_body: "You make an excellent point. However...", article_api_id: "http://www.placecage.com/g/200/198"
-c2 = Comment.create subject: "The link between vaccines and autism.", text_body: "This reminds me of the time when I...", article_api_id: "http://www.placecage.com/g/200/198"
-c3 = Comment.create subject: "Moon landing conspiracy debunked.", text_body: "Please no Ad Hominem attacks.", article_api_id: "http://www.placecage.com/g/200/199"
-c4 = Comment.create subject: "Moon landing conspiracy debunked.", text_body: "In conclusion...", article_api_id: "http://www.placecage.com/g/200/199"
-c5 = Comment.create subject: "Trump and Putin, and Hillary Clinton's emails.", text_body: "As a mother...", article_api_id: "http://www.placecage.com/g/200/200"
-c6 = Comment.create subject: "Trump and Putin, and Hillary Clinton's emails.", text_body: "Down with the patriarchy.", article_api_id: "http://www.placecage.com/g/200/200"
-c7 = Comment.create subject: "Why abortion doctors are serial killers.", text_body: "Thoughts and prayers.", article_api_id: "http://www.placecage.com/g/200/201"
-c8 = Comment.create subject: "Why abortion doctors are serial killers.", text_body: "This is good for bitcoin.", article_api_id: "http://www.placecage.com/g/200/201"
+c1 = Comment.create subject: "The link between vaccines and autism.", text_body: "You make an excellent point. However..."
+c2 = Comment.create subject: "The link between vaccines and autism.", text_body: "This reminds me of the time when I..."
+c3 = Comment.create subject: "Moon landing conspiracy debunked.", text_body: "Please no Ad Hominem attacks."
+c4 = Comment.create subject: "Moon landing conspiracy debunked.", text_body: "In conclusion..."
+c5 = Comment.create subject: "Trump and Putin, and Hillary Clinton's emails.", text_body: "As a mother..."
+c6 = Comment.create subject: "Trump and Putin, and Hillary Clinton's emails.", text_body: "Down with the patriarchy."
+c7 = Comment.create subject: "Why abortion doctors are serial killers.", text_body: "Thoughts and prayers."
+c8 = Comment.create subject: "Why abortion doctors are serial killers.", text_body: "This is good for bitcoin."
 
 art1.comments << c1
 art1.comments << c2
