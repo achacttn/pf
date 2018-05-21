@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
     belongs_to :user
-    belongs_to :argument
+    belongs_to :article
 end

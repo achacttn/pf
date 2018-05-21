@@ -15,26 +15,22 @@ ActiveRecord::Schema.define(version: 2018_05_19_060426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "arguments", force: :cascade do |t|
-    t.text "title"
-    t.integer "article_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "articles", force: :cascade do |t|
     t.text "title"
     t.datetime "publish_date"
     t.text "url"
+    t.text "article_api_id"
+    t.text "section"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
+    t.text "subject"
     t.text "text_body"
+    t.text "article_api_id"
     t.integer "user_id"
-    t.integer "argument_id"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

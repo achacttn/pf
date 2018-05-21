@@ -1,4 +1,3 @@
 class Article < ApplicationRecord
-    has_many :arguments
-    has_many :comments, through: :arguments
+    has_many :comments
 end
