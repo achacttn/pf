@@ -1,9 +1,24 @@
 %h2.heading CONTROVERSIAL ARTICLES
-\
+%ul
+    -@article_array.each do |x_1|
+        %li.article-display
+            =x_1["title"]
+            %br
+            Published:
+            =x_1["publish_date"]
+            %br
+            %a{ :href => "#{x_1["url"]}"}
+                =x_1["url"]
+            %br
+            Category: 
+            =x_1["section"]
+            %br
+            Comments:
+            =x_1.comments.length
 %h2.heading LATEST HEADLINES
 %ul
     -@results["response"]["results"].each do |x|
-        %li.search-result
+        %li.article-query
             =x["webTitle"]
             %br
             Published:

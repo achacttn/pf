@@ -21,14 +21,25 @@
 }
 
 .main-header, .heading {
-    padding: 20px;
+    padding: 15px;
     color: mediumaquamarine;
 }
 
 .main-nav {
-    background-color: rgba(30,30,30,0.9);
+    background-color: rgba(10,10,10,0.8);
     color: cyan;
     height: 60px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.main-wrapper {
+    margin-top: 60px;
+}
+
+h1, h2, ul {
+    margin-left: 100px;
 }
 
 ul {
@@ -46,6 +57,6 @@ ul {
     background-color: rgb(168, 155, 155);
 }
 
-.search-result {
-    margin: 30px;
+.article-query, .article-display {
+    margin: 15px;
 }
