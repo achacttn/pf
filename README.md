@@ -3,6 +3,7 @@ Basic features:
 
 Bonus features:
 -Time zone
+-fontawewsome for search
 
 Bugs:
 (1) Contradiction exists between rails console and terminal.

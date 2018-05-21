@@ -4,21 +4,21 @@
     <title>Pf</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
   <nav class="main-nav">
-    <ul>
-      <li class="nav-list-elements"><a>Discussions</a></li>
+    <ul class="main-nav-list">
       <li class="nav-list-elements">
         <input class="nav-search" type="text" placeholder="Search">
-        <input class="nav-search" type="submit"><i class="fas fa-search"></i>
+        <input class="nav-search" type="submit" name="search_query" value="Go!">
       </li>
-      <li class="nav-list-elements"><a>Login</a></li>
-      <li class="nav-list-elements"><a>Register</a></li>
+      <li class="nav-list-elements"><a href="#" class="nav-links">Discussions</a></li>
+      <li class="nav-list-elements"><a href="#" class="nav-links">About</a></li>      
+      <li class="nav-list-elements"><a href="#" class="nav-links">Login</a></li>
+      <li class="nav-list-elements"><a href="#" class="nav-links">Register</a></li>
     </ul>
   </nav>
   <div class="main-wrapper">
