@@ -13,8 +13,8 @@
             Comments:
             =x_1.comments.length
             %br
-            %a{ :href => "#{x_1["url"]}"}
-                =x_1["url"]
+            %a{ :href => "#{x_1['url']}"}
+                =x_1['url']
 %h2.heading LATEST HEADLINES
 %ul
     -@results["response"]["results"].each do |x|
