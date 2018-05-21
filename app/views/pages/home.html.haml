@@ -4,8 +4,8 @@
         %li.article-display
             =x_1["title"]
             %br
-            Category: 
-            =x_1["section"]
+            %a{ :href => "#" }
+                =x_1["section"]
             %br
             Published:
             =x_1["publish_date"]
@@ -21,13 +21,13 @@
         %li.article-query
             =x["webTitle"]
             %br
-            Category:
-            =x["sectionName"]
+            %a{ :href => "/#{x["sectionName"]}" }
+                ="#{x["sectionName"]}"
             %br
             Published:
             =x["webPublicationDate"]
             %br
-            %a{ :href => "showpage"}
+            %a{ :href => "showpage" }
                 ="Be the first to comment"
             %br
             %a{ :href => "#{x["webUrl"]}" }

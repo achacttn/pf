@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pf</title>
+    <title>Politifight</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,9 +11,12 @@
   <body>
   <nav class="main-nav">
     <ul class="main-nav-list">
+      <li class="nav-list-elements"><a href="/" class="nav-links">Home</a></li>
       <li class="nav-list-elements">
-        <input class="nav-search" type="text" placeholder="Search">
-        <input class="nav-search" type="submit" name="search_query" value="Go!">
+        <%= form_tag(search_path, method: :get) do %>
+          <%= text_field_tag :search_query %>
+          <%= submit_tag 'Search' %>
+        <% end %>
       </li>
       <li class="nav-list-elements"><a href="#" class="nav-links">Discussions</a></li>
       <li class="nav-list-elements"><a href="#" class="nav-links">About</a></li>      
@@ -22,7 +25,7 @@
     </ul>
   </nav>
   <div class="main-wrapper">
-  <h1 class="main-header">PF HOME</h1>
+  <h1 class="main-header">Politi-fight!</h1>
     <%= yield %>
   </div>
   </body>

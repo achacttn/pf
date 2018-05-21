@@ -1,0 +1,19 @@
+%h2.heading
+    ="Search results for #{@searching}"
+
+%ul
+    -@search_results["response"]["results"].each do |x|
+        %li.article-query
+            =x["webTitle"]
+            %br
+            %a{ :href => "/#{x["sectionName"]}" }
+                ="#{x["sectionName"]}"
+            %br
+            Published:
+            =x["webPublicationDate"]
+            %br
+            %a{ :href => "showpage" }
+                ="Be the first to comment"
+            %br
+            %a{ :href => "#{x["webUrl"]}" }
+                =x["webUrl"]
