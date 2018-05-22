@@ -10,6 +10,9 @@ class PagesController < ApplicationController
         @results = HTTParty.get( general_fetch )
     end
 
+    def about
+    end
+
     def search
         @searching = params[:search_query]
         search_url = "https://content.guardianapis.com/search?q=#{@searching}&api-key=#{$API_KEY}"

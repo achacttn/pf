@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Politifight</title>
+    <title>Politi-fight</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,15 +12,15 @@
   <body>
   <nav class="main-nav">
     <ul class="main-nav-list">
-      <li class="nav-list-elements"><a href="/" class="nav-links">Home</a></li>
+      <li class="nav-list-elements"><%= link_to 'Home', root_path %></li>
       <li class="nav-list-elements">
         <%= form_tag(search_path, method: :get) do %>
           <%= text_field_tag :search_query %>
           <%= submit_tag 'Search' %>
         <% end %>
       </li>
-      <li class="nav-list-elements"><a href="#" class="nav-links">Discussions</a></li>
-      <li class="nav-list-elements"><a href="#" class="nav-links">About</a></li>      
+      <li class="nav-list-elements"><%= link_to 'About', about_path %></li>
+      <li class="nav-list-elements"><a href="#" class="nav-links">Profile</a></li>      
       <% if @current_user.present? %>
         <li class="nav-list-elements">Welcome back, <%= @current_user.username %></li>
         <li class="nav-list-elements"><%= link_to 'Logout', login_path, method: :delete %></li>

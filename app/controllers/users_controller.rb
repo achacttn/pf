@@ -10,7 +10,8 @@ class UsersController < ApplicationController
         user = User.new( user_params )
         if params[:file].present?
             req = Cloudinary::Uploader.upload(params[:file])
-            user.image = req["public-id"]
+            user.image = req["public_id"]
+        # add an 'else' statement here for default pic
         end
         user.save
         if user.persisted?
@@ -28,10 +29,13 @@ class UsersController < ApplicationController
     def show
         @user = User.find( params[:id] )
         # uniq array below
+        @user_comments = []
         @user_subjects = []
         @user.comments.each do |cmt|
+            @user_comments.push(cmt)
             @user_subjects.push(cmt.subject)
         end
+        @user_subjects.uniq!
     end
 
     def edit

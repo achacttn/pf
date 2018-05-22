@@ -3,16 +3,27 @@
 %ul.deets
     %li
         ="First name: #{@user.first_name}"
+    %br
     %li
         ="Last name: #{@user.last_name}"
+    %br
     %li
         ="Email: #{@user.email}"
+    %br
     %li
-        =@user.image
+        =cl_image_tag(@user.image)
+    %br
 %h2.heading Your discussions
-%p
-    =@user_subjects
-%hr
+%p.user_info
+    -if @user_subjects.length == 0
+        ="You are currently not participating in any discussions."
+    -else
+        -@user_subjects.each do |sub|
+            =sub
 %h2.heading Your comments
-%p
-    =@user_subjects
+%p.user_info
+    -if @user_comments.length == 0
+        ="You currently do not have any comments."
+    -else
+        -@user_comments.each do |com|
+            =com

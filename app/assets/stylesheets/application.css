@@ -121,5 +121,14 @@ ul {
 }
 
 .deets > * {
-    padding: 10px;
+    padding: 5px;
+}
+
+.deets > *:first-child {
+    padding: 30px 0px 0px 0px;
+}
+
+.user_info {
+    padding: 20px 0px;
+    margin-left: 100px;
 }

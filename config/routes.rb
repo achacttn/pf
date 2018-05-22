@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get "/search" => "pages#search"
 
+  get "/about" => "pages#about"
+
   get "/:category" => "pages#category"
 
 end
