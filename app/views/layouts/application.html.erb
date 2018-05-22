@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
@@ -20,12 +21,12 @@
       </li>
       <li class="nav-list-elements"><a href="#" class="nav-links">Discussions</a></li>
       <li class="nav-list-elements"><a href="#" class="nav-links">About</a></li>      
-      <li class="nav-list-elements"><a href="#" class="nav-links">Login</a></li>
       <% if @current_user.present? %>
-        Welcome back, <%= @current_user.username %>
-          <%= link_to 'Logout', login_path, method: :delete %>
+        <li class="nav-list-elements">Welcome back, <%= @current_user.username %></li>
+        <li class="nav-list-elements"><%= link_to 'Logout', login_path, method: :delete %></li>
       <% else %>
-      <li class="nav-list-elements"><%= link_to 'Register', new_user_path %></li>
+        <li class="nav-list-elements"><%= link_to 'Login', login_path %></li>      
+        <li class="nav-list-elements"><%= link_to 'Register', new_user_path %></li>
       <% end %>
     </ul>
   </nav>

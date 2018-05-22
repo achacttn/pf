@@ -32,6 +32,7 @@ gem 'httparty'      # make HTTP requests i.e. for API
 gem 'guardian-content'
 gem 'figaro'
 gem 'rails_12factor', group: :production
+gem 'cloudinary'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

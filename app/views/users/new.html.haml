@@ -8,7 +8,7 @@
             %li
                 =error
 %br
-=form_for @user, :html => { :class => "registration_form" } do |field|
+=form_for @user, :html => { :class => "registration_form", :multipart => true } do |field|
     =field.label :username, "Username:"
     =field.text_field :username, :class => "form_element"
     %br
@@ -22,7 +22,7 @@
     =field.text_field :email, :class => "form_element"
     %br
     =field.label :image, "Profile picture:"
-    =field.text_field :image, :class => "form_element"
+    =field.cl_image_upload :image, :class => "form_element"
     %br
     =field.label :password, "Password:"
     =field.password_field :password, :class => "form_element"
