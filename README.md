@@ -1,9 +1,7 @@
-Basic features:
--API search
-
 Bonus features:
 -Time zone
--fontawewsome for search
+-fontawewsome for search icon
+-aligning form elements
 
 Bugs:
 (1) Contradiction exists between rails console and terminal.

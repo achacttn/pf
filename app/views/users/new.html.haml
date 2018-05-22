@@ -1,0 +1,34 @@
+%h2.heading Registration form
+%br
+%br
+-if flash[:errors]
+    %p.error_message Invalid inputs
+    %ul
+        - flash[:errors].each do |error|
+            %li
+                =error
+%br
+=form_for @user, :html => { :class => "registration_form" } do |field|
+    =field.label :username, "Username:"
+    =field.text_field :username, :class => "form_element"
+    %br
+    =field.label :first_name, "First name:"
+    =field.text_field :first_name, :class => "form_element"
+    %br
+    =field.label :last_name, "Last name:"
+    =field.text_field :last_name, :class => "form_element"
+    %br
+    =field.label :email, "Email address:"
+    =field.text_field :email, :class => "form_element"
+    %br
+    =field.label :image, "Profile picture:"
+    =field.text_field :image, :class => "form_element"
+    %br
+    =field.label :password, "Password:"
+    =field.password_field :password, :class => "form_element"
+    %br
+    =field.label :password_confirmation, "Confirm password:"
+    =field.password_field :password_confirmation, :class => "form_element"
+    %br
+    %br
+    =field.submit

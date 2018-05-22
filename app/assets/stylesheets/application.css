@@ -20,9 +20,21 @@
     padding: 0px;
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 .main-header, .heading {
     padding: 15px;
-    color: mediumaquamarine;
+    color: cyan;
+}
+
+.main-header {
+    color: slategray;
+}
+
+.heading {
+    background-color: rgba(10,10,10,0.8);
 }
 
 .main-nav {
@@ -37,6 +49,24 @@
 .nav-links {
     text-decoration: none;
     color: cyan;
+}
+
+.nav-list-elements:hover {
+    background-color: rgba(90,90,90,0.8);
+}
+
+.nav-list-elements:hover:nth-of-type(2) {
+    background-color: inherit;
+}
+
+.nav-list-elements > a:link {
+    color: cyan;
+    text-decoration: none;
+}
+
+.nav-list-elements > a:visited {
+    color: cyan;
+    text-decoration: none;
 }
 
 .main-wrapper {
@@ -54,7 +84,7 @@ ul {
 .nav-list-elements {
     display: inline-block;
     font-size: 20px;
-    margin: 19px;
+    padding: 18px;
 }
 
 .nav-search {
@@ -67,5 +97,25 @@ ul {
 }
 
 .article-query:hover, .article-display:hover {
-    background-color: hotpink;
+    background-color: rgba(180,180,180,0.7);
+}
+
+.registration_form {
+    margin-left: 100px;
+}
+
+.registration_form > * {
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgba(0,0,250,0.1);
+}
+
+.form_element:hover {
+    background-color: rgba(0,0,250,0.2);
+}
+
+.error_message {
+    margin-left: 100px;
+    color: rgba(255,0,0,1);
+    font-size: x-large;
 }
