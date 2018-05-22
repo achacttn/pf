@@ -27,6 +27,11 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find( params[:id] )
+        # uniq array below
+        @user_subjects = []
+        @user.comments.each do |cmt|
+            @user_subjects.push(cmt.subject)
+        end
     end
 
     def edit

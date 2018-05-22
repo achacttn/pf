@@ -119,3 +119,7 @@ ul {
     color: rgba(255,0,0,1);
     font-size: x-large;
 }
+
+.deets > * {
+    padding: 10px;
+}

@@ -1,8 +1,9 @@
 %h2.heading Login
-    -if flash[:errors]
+%br
+-if flash[:errors]
     %p.error_message="#{flash[:errors]}"
-
-=form_tag, :html => { :class => "registration_form" } login_path do
+%br
+=form_tag login_path, :class => "registration_form" do
     =label_tag (:email)
     =email_field_tag :email, nil
     %br

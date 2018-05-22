@@ -1,9 +1,18 @@
 %h2.heading Profile information
-
-%code=@user    
-
-%h2.heading Your discussions
-
 %hr
-
+%ul.deets
+    %li
+        ="First name: #{@user.first_name}"
+    %li
+        ="Last name: #{@user.last_name}"
+    %li
+        ="Email: #{@user.email}"
+    %li
+        =@user.image
+%h2.heading Your discussions
+%p
+    =@user_subjects
+%hr
 %h2.heading Your comments
+%p
+    =@user_subjects
