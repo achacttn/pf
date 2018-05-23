@@ -1,0 +1,25 @@
+%h2.heading Article Basic Info
+%div.article_info
+    %ul
+        %li.article_info_element
+            =@chosen_article.title
+        %li.article_info_element
+            =@chosen_article.publish_date
+        %li.article_info_element
+            =link_to "#{@chosen_article.url}", @chosen_article.url, target: "_blank"
+        %li.article_info_element
+            =link_to "#{@chosen_article.section}", about_path( @chosen_article.section )
+%h2.heading Discussions
+%div.comment_section
+    %ul.subject_list
+        -@chosen_article_subjects.each do |subj|
+            %li.subject_list_element
+                %p.subject_list_element_title
+                    =subj.upcase
+                    %ul.comment_list
+                        -@chosen_article.comments.each do |each_cmt|
+                            -if each_cmt.subject == subj
+                                %li.comment_list_element
+                                    =each_cmt.text_body
+                                    %br
+                                    ="Comment by #{each_cmt.user.username}"

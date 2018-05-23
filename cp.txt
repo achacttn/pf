@@ -1,0 +1,7 @@
+
+<%= form_for @comment do |f| %>
+
+<%= hidden_field_tag 'article_id', params[:url] %>
+
+<%= f.submit %>
+<% end %>

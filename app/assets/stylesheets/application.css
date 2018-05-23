@@ -128,7 +128,30 @@ ul {
     padding: 30px 0px 0px 0px;
 }
 
-.user_info {
+.user_info, .about_info {
     padding: 20px 0px;
     margin-left: 100px;
+}
+
+.article_info_element {
+    padding: 10px 0px;
+}
+
+.comment_section {
+    background-color: rgba(255,0,0,0.3);
+    height: 500px;
+}
+
+.subject_list_element {
+    border: 2px solid black;
+}
+
+.subject_list_element_title {
+    color: red;
+    padding: 20px;
+}
+
+.comment_list_element {
+    border: 2px dotted black;
+    padding: 12px;
 }

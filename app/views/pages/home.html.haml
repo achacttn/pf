@@ -4,17 +4,15 @@
         %li.article-display
             =x_1["title"]
             %br
-            %a{ :href => "#" }
+            %a{ :href => "/#{x_1["section"]}", :target => "_blank" }
                 =x_1["section"]
             %br
             Published:
             =x_1["publish_date"]
             %br
-            Comments:
-            =x_1.comments.length
+            =link_to "Comments: #{x_1.comments.length}", article_path( x_1.id ), target: "_blank"
             %br
-            %a{ :href => "#{x_1['url']}" }
-                =x_1['url']
+            =link_to "#{x_1['url']}", x_1['url'], target: "_blank"
 %h2.heading LATEST HEADLINES
 %ul
     -@results["response"]["results"].each do |x|
@@ -27,8 +25,7 @@
             Published:
             =x["webPublicationDate"]
             %br
-            %a{ :href => "showpage" }
-                ="Be the first to comment"
+            =link_to "Be the first to comment", article_comment_path(x['id'])
             %br
-            %a{ :href => "#{x["webUrl"]}" }
+            %a{ :href => "#{x["webUrl"]}", :target => "_blank" }
                 =x["webUrl"]

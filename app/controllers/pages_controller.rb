@@ -2,6 +2,7 @@ class PagesController < ApplicationController
     $API_KEY = ENV["guardian_api_key"]
     def home
         @article_array = []
+
         Article.find_each do |x|
             @article_array.push(x)
         end
@@ -24,5 +25,5 @@ class PagesController < ApplicationController
         category_url = "https://content.guardianapis.com/#{@category}?api-key=#{$API_KEY}"
         @category_results = HTTParty.get( category_url )
     end
-
+    
 end
