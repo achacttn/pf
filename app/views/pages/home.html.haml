@@ -4,13 +4,12 @@
         %li.article-display
             =x_1["title"]
             %br
-            %a{ :href => "/#{x_1["section"]}", :target => "_blank" }
-                =x_1["section"]
+            =link_to "#{x_1["section"]}", category_path( x_1["section"] )
             %br
             Published:
             =x_1["publish_date"]
             %br
-            =link_to "Comments: #{x_1.comments.length}", article_path( x_1.id ), target: "_blank"
+            =link_to "Comments: #{x_1.comments.length}", article_path( x_1.id )
             %br
             =link_to "#{x_1['url']}", x_1['url'], target: "_blank"
 %h2.heading LATEST HEADLINES
@@ -19,13 +18,11 @@
         %li.article-query
             =x["webTitle"]
             %br
-            %a{ :href => "/#{x["sectionName"]}" }
-                ="#{x["sectionName"]}"
+            =link_to "#{x["sectionName"]}", category_path( x["sectionName"] )
             %br
             Published:
             =x["webPublicationDate"]
             %br
             =link_to "Be the first to comment", article_comment_path(x['id'])
             %br
-            %a{ :href => "#{x["webUrl"]}", :target => "_blank" }
-                =x["webUrl"]
+            =link_to "#{x["webUrl"]}", x["webUrl"], target: "_blank"

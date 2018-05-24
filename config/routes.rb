@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   get "/about" => "pages#about"
 
-  get "/:category" => "pages#category"
+  get "/:category" => "pages#category", as: :category
 
 end

@@ -33,6 +33,15 @@ body {
     color: slategray;
 }
 
+#search_query, #nav-search {
+    height: 2.4em;
+
+}
+
+#nav-search {
+    width: 40px;
+}
+
 .heading {
     background-color: rgba(10,10,10,0.8);
 }
@@ -93,6 +102,7 @@ ul {
 }
 
 .article-query, .article-display {
+    background-color: rgba(220,220,220,0.8);
     margin: 15px;
 }
 
