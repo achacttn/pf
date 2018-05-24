@@ -103,7 +103,7 @@ ul {
 
 .article-query, .article-display {
     background-color: rgba(220,220,220,0.8);
-    margin: 15px;
+    margin: 15px 0px;
 }
 
 .article-query:hover, .article-display:hover {
@@ -139,31 +139,35 @@ ul {
 }
 
 .user_info, .about_info {
-    padding: 20px 0px;
+    padding: 10px 15px;
     margin-left: 100px;
 }
 
+.about_info {
+    font-size: 1.2em;
+}
+
 .article_info_element {
-    padding: 10px 0px;
+    font-size: 1.2em;
+    padding: 10px 15px;
 }
 
 .comment_section {
-    background-color: rgba(255,0,0,0.3);
     height: 500px;
 }
 
 .subject_list_element {
-    border: 2px solid black;
+    background-color: rgba(220,220,220,0.8);
+    border: 2px groove rgba(180,180,180,0.8);
 }
 
 .subject_list_element_title {
-    color: red;
     padding: 20px;
 }
 
 .comment_list_element {
-    border: 2px dotted black;
     padding: 12px;
+    border: 2px outset rgba(180,180,180,0.8);    
 }
 
 .button-edit {
@@ -179,4 +183,8 @@ ul {
 .new_discussion_form {
     padding: 20px;
     margin-left: 100px;
+}
+
+#new_article {
+    background-color: red;
 }

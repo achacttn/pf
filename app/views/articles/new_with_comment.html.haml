@@ -9,15 +9,20 @@
             =link_to "#{@article_temp_info["webUrl"]}", @article_temp_info["webUrl"], target: "_blank"
         %li.article_info_element
             =link_to "#{@article_temp_info["sectionName"]}", "/#{@article_temp_info["sectionName"]}"
-%h2.heading No comments
+%h2.heading Discussions
 -if @current_user.present?
-    =form_for @comment do |attr|
-        =attr.label :subject, "Subject title:"
-        =attr.text_field :subject, :class => "form_element"
-        %br
-        =attr.label :text_body, "Comment"
-        =attr.text_area :text_body, :class => "form_element"
-        =hidden_field_tag 'article_id', params[:url]
-        =attr.submit
+    %div.new_discussion_form#new_article
+        =form_for @comment do |attr|
+            =attr.label :subject, "Subject title:"
+            %br
+            =attr.text_field :subject, :class => "form_element"
+            %br
+            =attr.label :text_body, "Comment:"
+            %br
+            =attr.text_area :text_body, :class => "form_element"
+            =hidden_field_tag 'article_id', params[:url]
+            %br
+            =attr.submit "Create comment"
 -else
-    ="You must be logged in to comment."
+    %p.new_discussion_form
+        ="You must be logged in to comment."

@@ -26,16 +26,18 @@
                                     %br
                                     ="#{each_cmt.user.created_at}"
     -if @current_user.present?
-        %p.new_discussion_form
-            ="Start another discussion!"
-        =form_tag comment_creation_path do 
-            =label_tag :subject, "Subject title:"
-            =text_field_tag :subject, nil,  :class => "form_element"
-            %br
-            =label_tag :text_body, "Comment"
-            =text_area_tag :text_body, nil, :class => "form_element"
-            =hidden_field_tag 'article_id', params[:id]
-            =submit_tag
+        %div.new_discussion_form
+            =form_tag comment_creation_path do 
+                =label_tag :subject, "Subject title:"
+                %br
+                =text_field_tag :subject, nil,  :class => "form_element"
+                %br
+                =label_tag :text_body, "Comment:"
+                %br
+                =text_area_tag :text_body, nil, :class => "form_element"
+                =hidden_field_tag 'article_id', params[:id]
+                %br
+                =submit_tag "Create comment"
     -else
         %p.new_discussion_form
             ="You must be logged in to comment."

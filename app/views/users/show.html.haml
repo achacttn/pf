@@ -21,12 +21,16 @@
     -if @user_subjects.length == 0
         ="You are currently not participating in any discussions."
     -else
-        -@user_subjects.each do |sub|
-            =sub
+        %ul
+            -@user_subjects.each do |sub|
+                %li
+                    =sub
 %h2.heading Your comments
 %p.user_info
     -if @user_comments.length == 0
         ="You currently do not have any comments."
     -else
-        -@user_comments.each do |cmt|
-            =cmt
+        %ul
+            -@user_comments.each do |cmt|
+                %li
+                    =cmt.text_body
