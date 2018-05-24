@@ -9,7 +9,7 @@
             =link_to "#{@article_temp_info["webUrl"]}", @article_temp_info["webUrl"], target: "_blank"
         %li.article_info_element
             =link_to "#{@article_temp_info["sectionName"]}", "/#{@article_temp_info["sectionName"]}"
-%h2.heading Discussions
+%h2.heading No comments
 -if @current_user.present?
     =form_for @comment do |attr|
         =attr.label :subject, "Subject title:"

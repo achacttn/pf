@@ -155,3 +155,18 @@ ul {
     border: 2px dotted black;
     padding: 12px;
 }
+
+.button-edit {
+    text-decoration: none;
+    border: 1px solid rgba(180,180,180,0.8);
+    background-color: rgba(180,180,180,0.8);
+    color: black;
+}
+.button-edit:hover {
+    background-color: rgba(140,140,140,0.8);
+}
+
+.new_discussion_form {
+    padding: 20px;
+    margin-left: 100px;
+}

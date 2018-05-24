@@ -46,7 +46,7 @@ class UsersController < ApplicationController
             user.image = req["public-id"]
         end
         
-        user.update_atttributes( user_params )
+        user.update_attributes( user_params )
         user.save
         redirect_to(user_path(user))
     end

@@ -13,7 +13,9 @@
     %li
         =cl_image_tag(@user.image)
     %br
-    
+    =link_to "Edit details", edit_user_path, class: "button-edit"
+    %br
+    %br
 %h2.heading Your discussions
 %p.user_info
     -if @user_subjects.length == 0

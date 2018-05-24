@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
         end
 
         @chosen_article_subjects.uniq!
+
+        @comment = Comment.new
     end
 
     def new_with_comment

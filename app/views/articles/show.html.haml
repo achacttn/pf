@@ -23,3 +23,19 @@
                                     =each_cmt.text_body
                                     %br
                                     ="Comment by #{each_cmt.user.username}"
+                                    %br
+                                    ="#{each_cmt.user.created_at}"
+    -if @current_user.present?
+        %p.new_discussion_form
+            ="Start another discussion!"
+        =form_for @comment comment_creation_path do |attr|
+            =attr.label :subject, "Subject title:"
+            =attr.text_field :subject, :class => "form_element"
+            %br
+            =attr.label :text_body, "Comment"
+            =attr.text_area :text_body, :class => "form_element"
+            =hidden_field_tag 'article_id', params[:id]
+            =attr.submit
+    -else
+        %p.new_discussion_form
+            ="You must be logged in to comment."
