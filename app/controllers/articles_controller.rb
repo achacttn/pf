@@ -43,10 +43,5 @@ class ArticlesController < ApplicationController
         new_comment.save
 
         redirect_to article_path( new_article.id )
-    # httparty requst using params[:article_id]
-    # Article.create with those results
-    # Comment.create with params, article & user associations
-
     end
-
 end

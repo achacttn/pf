@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get "/article/new/*url" => "articles#new_with_comment", as: :article_comment
   post "/article/new" => "articles#create_with_comment", as: :comments
-  post "/article/show" => "comments#create", as: :comment_creation
+  post "/comment" => "comments#create_comment", as: :comment_creation
 
   get "/profile" => "users#profile"
 
