@@ -12,10 +12,10 @@ puts "Created #{User.all.length} users..."
 Article.destroy_all
 puts "Creating articles..."
 
-art1 = Article.create title: "Healthcare policy changes.", publish_date: "2018-05-14", url: "http://www.placecage.com/350/350", article_api_id: "aaaaa", section: "General"
-art2 = Article.create title: "NASA announcement.", publish_date: "2018-05-15", url: "http://www.placecage.com/350/350", article_api_id: "bbbbb", section: "General"
-art3 = Article.create title: "Political debate.", publish_date: "2018-05-16", url: "http://www.placecage.com/350/350", article_api_id: "ccccc", section: "General"
-art4 = Article.create title: "Compulsory religious education.", publish_date: "2018-05-17", url: "http://www.placecage.com/350/350", article_api_id: "ddddd", section: "General"
+art1 = Article.create title: "Healthcare policy changes.", publish_date: "2018-05-14", url: "http://www.placecage.com/350/350", article_api_id: "aaaaa", section: "US News"
+art2 = Article.create title: "NASA announcement.", publish_date: "2018-05-15", url: "http://www.placecage.com/350/350", article_api_id: "bbbbb", section: "US News"
+art3 = Article.create title: "Political debate.", publish_date: "2018-05-16", url: "http://www.placecage.com/350/350", article_api_id: "ccccc", section: "US News"
+art4 = Article.create title: "Compulsory religious education.", publish_date: "2018-05-17", url: "http://www.placecage.com/350/350", article_api_id: "ddddd", section: "US News"
 
 puts "Created #{Article.all.length} articles..."
 
