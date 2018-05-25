@@ -22,9 +22,9 @@
         ="You are currently not participating in any discussions."
     -else
         %ul
-            -@user_subjects.each do |sub|
+            -@user_arguments.each do |key, val|
                 %li
-                    =sub
+                    =link_to "#{key}", article_path( val )
                 %br
 %h2.heading Your comments
 %p.user_info
@@ -34,4 +34,5 @@
         %ul
             -@user_comments.each do |cmt|
                 %li
-                    =cmt.text_body
+                    =link_to "#{cmt.text_body}", article_path( cmt.article_id )
+                %br

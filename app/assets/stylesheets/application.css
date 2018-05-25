@@ -185,6 +185,7 @@ ul {
     margin-left: 100px;
 }
 
-#new_article {
-    background-color: red;
+#subject.form_element, #text_body.form_element, #comment_subject.form_element, #comment_text_body.form_element {
+    font-size: 1.2em;
+    background-color: hotpink;
 }

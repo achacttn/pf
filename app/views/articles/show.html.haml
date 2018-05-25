@@ -15,7 +15,7 @@
         -@chosen_article_subjects.each do |subj|
             %li.subject_list_element
                 %p.subject_list_element_title
-                    =subj.upcase
+                    =subj
                     %ul.comment_list
                         -@chosen_article.comments.each do |each_cmt|
                             -if each_cmt.subject == subj
@@ -37,7 +37,7 @@
                 =text_area_tag :text_body, nil, :class => "form_element"
                 =hidden_field_tag 'article_id', params[:id]
                 %br
-                =submit_tag "Create comment"
+                =submit_tag "Submit"
     -else
         %p.new_discussion_form
             ="You must be logged in to comment."

@@ -26,13 +26,23 @@ class UsersController < ApplicationController
     def show
         @user = User.find( params[:id] )
         # uniq array below
-        @user_comments = []
         @user_subjects = []
+        @user_comments = []
         @user.comments.each do |cmt|
-            @user_comments.push(cmt)
             @user_subjects.push(cmt.subject)
+            @user_comments.push(cmt)
         end
         @user_subjects.uniq!
+
+        @user_arguments = {}
+        @user_subjects.each do |each_sub|
+            @user_comments.each do |each_cmt|
+                if each_sub = each_cmt.subject
+                    @user_arguments[each_cmt.subject] = each_cmt.article_id
+                    next
+                end
+            end
+        end
     end
 
     def edit
