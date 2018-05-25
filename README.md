@@ -11,11 +11,7 @@ Comments on articles are grouped by subjects, so users can discuss specific aspe
 
 Non-standard gems used:
 
--httparty
-
 -figaro
-
--cloudinary
 
 
 To be added:
