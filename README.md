@@ -10,14 +10,22 @@ Comments on articles are grouped by subjects, so users can discuss specific aspe
 
 
 Non-standard gems used:
+
 -httparty
+
 -figaro
+
 -cloudinary
 
 
 To be added:
+
 -Notifications
+
 -Integrating more APIs (politifact, reuters, BBC... etc)
 
-Wishlist:
--Ad space & monetization
+
+
+Features:
+
+-Plenty of ad space & monetization
