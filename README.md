@@ -16,6 +16,7 @@ Non-standard gems used:
 
 
 To be added:
+-Notifications
 -Integrating more APIs (politifact, reuters, BBC... etc)
 
 Wishlist:
