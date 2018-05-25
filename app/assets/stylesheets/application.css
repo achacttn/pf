@@ -181,11 +181,17 @@ ul {
 }
 
 .new_discussion_form {
-    padding: 20px;
+    padding: 20px 0px;
     margin-left: 100px;
 }
 
 #subject.form_element, #text_body.form_element, #comment_subject.form_element, #comment_text_body.form_element {
     font-size: 1.2em;
-    background-color: hotpink;
+    border: 2px outset rgba(50,50,50,0.3);    
+}
+
+.form_submit_button {
+    font-size: 1.05em;
+    border: 2px outset rgba(50,50,50,0.3);
+    background-color: rgba(0,0,100,0.1);
 }

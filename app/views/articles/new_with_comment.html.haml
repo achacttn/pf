@@ -11,6 +11,12 @@
             =link_to "#{@article_temp_info["sectionName"]}", "/#{@article_temp_info["sectionName"]}"
 %h2.heading Discussions
 -if @current_user.present?
+    -if flash[:errors]
+        %p.error_message Subject or comment cannot be empty
+        %ul
+            -flash[:errors].each do |error|
+                %li.error_message
+                    =error
     %div.new_discussion_form#new_article
         =form_for @comment do |attr|
             =attr.label :subject, "Subject title:"
@@ -22,7 +28,7 @@
             =attr.text_area :text_body, :class => "form_element"
             =hidden_field_tag 'article_id', params[:url]
             %br
-            =attr.submit "Submit"
+            =attr.submit( "Submit", :class => "form_submit_button" )
 -else
     %p.new_discussion_form
         ="You must be logged in to comment."

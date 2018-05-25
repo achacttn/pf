@@ -3,8 +3,8 @@
 -if flash[:errors]
     %p.error_message Invalid inputs
     %ul
-        - flash[:errors].each do |error|
-            %li
+        -flash[:errors].each do |error|
+            %li.error_message
                 =error
 %br
 =render :partial => 'form'

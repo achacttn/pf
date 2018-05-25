@@ -26,6 +26,12 @@
                                     %br
                                     ="#{each_cmt.user.created_at}"
     -if @current_user.present?
+        -if flash[:errors]
+            %p.error_message Subject or comment cannot be empty
+            %ul
+                -flash[:errors].each do |error|
+                    %li.error_message
+                    =error
         %div.new_discussion_form
             =form_tag comment_creation_path do 
                 =label_tag :subject, "Subject title:"
@@ -37,7 +43,7 @@
                 =text_area_tag :text_body, nil, :class => "form_element"
                 =hidden_field_tag 'article_id', params[:id]
                 %br
-                =submit_tag "Submit"
+                =submit_tag( "Submit", :class => "form_submit_button" )
     -else
         %p.new_discussion_form
             ="You must be logged in to comment."
